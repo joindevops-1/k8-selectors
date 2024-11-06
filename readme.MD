@@ -1,1 +1,2 @@
 kubectl taint nodes ip-192-168-34-152.ec2.internal hardware=gpu:NoExecute
+kubectl label nodes ip-192-168-34-152.ec2.internal hardware=gpu
