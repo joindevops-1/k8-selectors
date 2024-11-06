@@ -21,4 +21,7 @@ spec:
     operator: "Equal"
     value: "gpu"
     effect: "NoExecute"
+  - key: "hardware"
+    operator: "Exists"
+    effect: "NoExecute"
     
