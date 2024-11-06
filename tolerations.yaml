@@ -17,11 +17,11 @@ spec:
   - name: nginx
     image: nginx:stable-perl
   tolerations:
-  - key: "hardware"
-    operator: "Equal"
-    value: "gpu"
-    effect: "NoSchedule"
-  - key: "hardware"
-    operator: "Exists"
-    effect: "NoSchedule"
+  - key: hardware
+    operator: Equal
+    value: gpu
+    effect: NoSchedule
+  - key: hardware
+    operator: Exists
+    effect: NoSchedule
     
