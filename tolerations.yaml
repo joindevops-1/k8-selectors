@@ -1,27 +1,25 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: nginx
+  name: with-node-affinity
 spec:
   affinity:
     nodeAffinity:
       requiredDuringSchedulingIgnoredDuringExecution:
         nodeSelectorTerms:
         - matchExpressions:
-          - key: hardware
+          - key: project
             operator: In
             values:
-            - gpu
+            - expense
   containers:
-  # docker run -d --name nginx nginx
-  - name: nginx
-    image: nginx:stable-perl
+  - name: with-node-affinity
+    image: nginx
   tolerations:
-  - key: hardware
-    operator: Equal
-    value: gpu
-    effect: NoSchedule
-  - key: hardware
-    operator: Exists
-    effect: NoSchedule
-    
+  - key: "project"
+    operator: "Equal"
+    value: "expense"
+    effect: "NoSchedule"
+  - key: "project"
+    operator: "Exists"
+    effect: "NoSchedule"
