@@ -20,8 +20,8 @@ spec:
   - key: "hardware"
     operator: "Equal"
     value: "gpu"
-    effect: "NoExecute"
+    effect: "NoSchedule"
   - key: "hardware"
     operator: "Exists"
-    effect: "NoExecute"
+    effect: "NoSchedule"
     
